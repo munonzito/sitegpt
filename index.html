@@ -4,10 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>#widgetIframe{position:fixed;bottom:0;right:0;border:none;overflow:hidden;z-index:999999}</style>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+    #widgetIframe{position:fixed;bottom:0;right:0;border:none;overflow:hidden;z-index:999999;display: block;}</style>
 </head>
 <body>
-    <h1>Bienvenidos</h1>
-    <iframe id="widgetIframe" height="50px" width="50px" src="https://sitegpt.vercel.app/#/" class="" frameborder="0"></iframe>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Características</a></li>
+            <li><a href="#">Precios</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+        <h1>Software de chatbots para sitios web</h1>
+        <p>Convierta su sitio web en una herramienta de conversión con nuestro software de chatbots fácil de usar.</p>
+        <button>Comience ahora</button>
+      </header>
+    
+      <section id="features">
+        <h2>Características principales</h2>
+    
+        <div class="feature">
+          <img src="https://via.placeholder.com/150" alt="">
+          <h3>Integración fácil</h3>
+          <p>Nuestro software se integra fácilmente con su sitio web existente.</p>
+        </div>
+    
+        <div class="feature">
+          <img src="https://via.placeholder.com/150" alt="">
+          <h3>Personalización completa</h3>
+          <p>Cree chatbots personalizados que se adapten a su marca y a sus necesidades.</p>
+        </div>
+    
+        <div class="feature">
+          <img src="https://via.placeholder.com/150" alt="">
+          <h3>Análisis en tiempo real</h3>
+          <p>Obtenga información valiosa sobre el comportamiento de sus visitantes y mejore su estrategia de conversión.</p>
+        </div>
+    
+      </section>
+    
+      <section id="pricing">
+        <h2>Precios</h2>
+    
+        <div class="plan">
+          <h3>Básico</h3>
+          <p>$10/mes</p>
+          <ul>
+            <li>1 chatbot personalizado</li>
+            <li>Análisis básico</li>
+            <li>Soporte por correo electrónico</li>
+          </ul>
+          <button>Comience ahora</button>
+        </div>
+    
+        <div class="plan">
+          <h3>Pro</h3>
+          <p>$20/mes</p>
+          <ul>
+            <li>5 chatbots personalizados</li>
+            <li>Análisis avanzado</li>
+            <li>Soporte por correo electrónico y teléfono</li>
+          </ul>
+          <button>Comience ahora</button>
+        </div>
+    
+        <div class="plan">
+          <h3>Premium</h3>
+          <p>$50/mes</p>
+          <ul>
+            <li>Chatbots ilimitados personalizados</li>
+            <li>Análisis avanzado y personalizado</li>
+            <li>Soporte por correo electrónico, teléfono y chat en vivo.</li>
+          </ul>
+          <button>Comience ahora</button>
+    
+        </div>
+    
+      </section>
+    
+      <!-- Aquí puede agregar más secciones como "Cómo funciona", "Testimonios", etc. -->
+    
+      <!-- Agregue su script de JavaScript aquí si es necesario -->
+    <iframe id="widgetIframe"   src="https://sitegpt.vercel.app/#/" class="" frameborder="0"></iframe>
 </body>
 </html>
