@@ -8,32 +8,38 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool showChat = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      child: Stack(
-        children: [
-          Positioned.fill(
-            child: Align(
-              alignment: Alignment.bottomRight,
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    showChat = !showChat;
-                  });
-                },
-                child: Container(
-                  width: showChat ? 200 : 50,
-                  height: showChat ? 200 : 50,
-                  color: Colors.red,
-                ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        title: Text(
+          "SiteGPT",
+          style: TextStyle(color: Colors.white),
+        ),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                color: Colors.purple,
+                width: 100,
+                height: 100,
               ),
             ),
-          ),
-        ],
+            Align(
+              alignment: Alignment.centerRight,
+              child: Container(
+                color: Colors.purple,
+                width: 100,
+                height: 100,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

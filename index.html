@@ -35,7 +35,42 @@ nav a {
   color: #fff;
   text-decoration: none;
 }
-    #widgetIframe{position:fixed;bottom:0;right:0;border:none;overflow:hidden;z-index:999999;display: block;}</style>
+
+#chatButton {
+  background-color: blue;
+  z-index: 999999;
+  width: 50px;
+  height: 50px;
+  border-radius:  50%;
+  position:fixed;bottom:0;right:0;border:none;overflow:hidden;z-index:999999;display: block;
+}
+
+    #widgetIframe{
+      width: 100vh;
+      height: 100vh;
+      position:fixed;bottom:50px;right:0;border:none;overflow:hidden;z-index:999999;display: block;}</style>
+ <script>
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Obtén el elemento sobre el que deseas detectar el clic
+//   var myButton = document.getElementById('chatButton');
+//   var iFrame = document.getElementById('widgetIframe');
+
+//   // Agrega un EventListener para el evento 'click'
+//   myButton.addEventListener('click', function () {
+//     if(iFrame.style.display == "none") {
+//       iFrame.style.display = "block";
+//     } else {
+//       iFrame.style.display = "none";
+//     }
+    
+//     // Aquí ejecutas la acción que deseas cuando se hace clic en el botón
+    
+//   });
+// });
+
+  
+</script>
 </head>
 <body>
     <header>
@@ -113,10 +148,63 @@ nav a {
         </div>
     
       </section>
+
+      <script>
+        // Crea el elemento div para el botón chat
+        var chatButton = document.createElement("div");
+        chatButton.id = "chatButton";
+        chatButton.style.backgroundColor = "blue";
+        chatButton.style.zIndex = "999999";
+        chatButton.style.width = "50px";
+        chatButton.style.height = "50px";
+        chatButton.style.borderRadius = "50%";
+        chatButton.style.position = "fixed";
+        chatButton.style.bottom = "0";
+        chatButton.style.right = "0";
+        chatButton.style.border = "none";
+        chatButton.style.overflow = "hidden";
+        chatButton.style.display = "block";
+        
+        // Crea el elemento iframe
+        var widgetIframe = document.createElement("iframe");
+        widgetIframe.id = "widgetIframe";
+        widgetIframe.src = "https://sitegpt.vercel.app/#/";
+        widgetIframe.style.width = "100vh";
+        widgetIframe.style.height = "100vh";
+        widgetIframe.style.position = "fixed";
+        widgetIframe.style.bottom = "50px";
+        widgetIframe.style.right = "0";
+        widgetIframe.style.border = "none";
+        widgetIframe.style.overflow = "hidden";
+        widgetIframe.style.zIndex = "999999";
+        widgetIframe.style.display = "block";
+        
+        // Agrega los elementos al body
+        document.body.appendChild(chatButton);
+        document.body.appendChild(widgetIframe);
+
+        document.addEventListener('DOMContentLoaded', function () {
+  // Obtén el elemento sobre el que deseas detectar el clic
+  var myButton = document.getElementById('chatButton');
+  var iFrame = document.getElementById('widgetIframe');
+
+  // Agrega un EventListener para el evento 'click'
+  myButton.addEventListener('click', function () {
+    if(iFrame.style.display == "none") {
+      iFrame.style.display = "block";
+    } else {
+      iFrame.style.display = "none";
+    }
+    
+    // Aquí ejecutas la acción que deseas cuando se hace clic en el botón
+    
+  });
+});
+    </script>
     
       <!-- Aquí puede agregar más secciones como "Cómo funciona", "Testimonios", etc. -->
-    
-      <!-- Agregue su script de JavaScript aquí si es necesario -->
-    <iframe id="widgetIframe" width="50vh" height="50vh"   src="https://sitegpt.vercel.app/#/" class="" frameborder="0"></iframe>
+   <!-- <div id="chatButton"></div>
+  
+    <iframe id="widgetIframe"  src="https://sitegpt.vercel.app/#/"  frameborder="0"></iframe>  -->
 </body>
 </html>
