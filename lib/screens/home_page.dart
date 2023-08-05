@@ -8,9 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Color containerColor = Colors.deepPurple;
-  Color clickColor = Colors.green;
-  int selectedColor = 0;
+  bool showChat = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,21 +22,13 @@ class _HomePageState extends State<HomePage> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                    if (selectedColor == 0) {
-                      containerColor = Colors.deepPurple;
-                      clickColor = Colors.green;
-                      selectedColor = 1;
-                    } else {
-                      containerColor = Colors.green;
-                      clickColor = Colors.deepPurple;
-                      selectedColor = 0;
-                    }
+                    showChat = !showChat;
                   });
                 },
                 child: Container(
-                  width: 50,
-                  height: 50,
-                  color: containerColor,
+                  width: showChat ? 200 : 50,
+                  height: showChat ? 200 : 50,
+                  color: Colors.red,
                 ),
               ),
             ),
